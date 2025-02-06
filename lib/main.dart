@@ -11,7 +11,11 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   Directory directory = await pathProvider.getApplicationDocumentsDirectory();
   Hive.init(directory.path);
+
+  // to store custom objects in hive box , we need to register adapter
  Hive.registerAdapter(DataModelAdapter());
+
+
   await Hive.openBox('hive_box');
   runApp(const MyApp());
 }

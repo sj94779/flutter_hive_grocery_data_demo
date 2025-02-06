@@ -1,7 +1,7 @@
 import 'package:hive/hive.dart';
 
 part 'data_model.g.dart';
-
+// to store custom objects in hive box , we need to register adapter
 // flutter packages pub run build_runner build
 
 @HiveType(typeId: 0)
